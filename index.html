@@ -10,16 +10,52 @@
 <body>
     <h1>Ujjal Sharma</h1>
     
-    <p>I work as a Software Developer at Nutanix, but I'm deeply passionate about AI and the Age of Intelligence. I believe AI, like any technology, will enhance our productivity, ability, and consciousness. I spend most of my time trying to contribute to this vision through my projects and work.</p>
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'about')">About</button>
+        <button class="tab-button" onclick="openTab(event, 'articles')">Articles</button>
+        <button class="tab-button" onclick="openTab(event, 'projects')">Projects</button>
+    </div>
     
-    <p>I studied Computer Science and Economics at BITS Goa. I love physics and high concept sci-fi stuff. Obsessed with consciousness (we should upload ourselves, haha), time (can we reverse entropy), and building my own iron man suit of course.</p>
+    <div id="about" class="tab-content active">
+        <p>I work as a Software Developer at Nutanix, but I'm deeply passionate about AI and the Age of Intelligence. I believe AI, like any technology, will enhance our productivity, ability, and consciousness. I spend most of my time trying to contribute to this vision through my projects and work.</p>
+        
+        <p>I studied Computer Science and Economics at BITS Goa. I love physics and high concept sci-fi stuff. Obsessed with consciousness (we should upload ourselves, haha), time (can we reverse entropy), and building my own iron man suit of course.</p>
+        
+        <p>Connect with me on <a href="https://github.com/ujjalsharma100">github</a>, <a href="https://x.com/ujjalsharma81">twitter</a>, <a href="https://www.linkedin.com/in/ujjal-sharma-631351125/">linkedin</a>, or drop a 'Hi' at <a href="mailto:ujjalsharma81@gmail.com">ujjalsharma81@gmail.com</a>!</p>
+        <p>Working on <a href="https://ujjalsharma100.github.io/curio_landing_page/">Curio</a>. Check it out!</p>
+    </div>
     
-    <p>I'm building <a href="https://ujjalsharma100.github.io/curio_landing_page/">Curio</a> because I believe deep personalization is key to building great AI products. The best AI systems learn about you over time, understand your unique needs and preferences, and adapt to serve you on a deeply personal level. This is what I'm working towards.</p>
+    <div id="articles" class="tab-content">
+        <p><a href="https://medium.com/@ujjalsharma81/redefining-the-objective-function-of-information-discovery-173fd9d851b5">Redefining the Objective Function of Information Discovery</a></p>
+        <p><a href="https://medium.com/@ujjalsharma81/how-knowledge-should-find-us-85604eefaa9b">How Knowledge Should Find Us</a></p>
+        <p><a href="https://medium.com/@ujjalsharma81/designing-a-scalable-and-optimized-intelligence-layer-of-a-knowledge-assistant-7fe4ab4687d2">Designing a Scalable and Optimized Intelligence Layer of a Knowledge Assistant</a></p>
+    </div>
     
-    <p>Connect with me on <a href="https://github.com/ujjalsharma100">github</a>, <a href="https://x.com/ujjalsharma81">twitter</a>, <a href="https://www.linkedin.com/in/ujjal-sharma-631351125/">linkedin</a>, or drop a 'Hi' at <a href="mailto:ujjalsharma81@gmail.com">ujjalsharma81@gmail.com</a>!</p>
+    <div id="projects" class="tab-content">
+        <p><a href="https://github.com/ujjalsharma100/curio-agent-sdk">Curio Agent SDK</a> - A flexible, model-agnostic agentic framework for building autonomous AI agents. Features tiered model routing, model and provider agnosticism, object identifier maps, flexible tool registry, a comprehensive observability tool.</p>
+        <p><a href="https://ujjalsharma100.github.io/talkdb-landing-page/">talkdb</a> - I believe talking with data should be done in natural language. Data is key to business, and communicating with it and generating insights from it should be done in natural language, which AI enables.</p>
+    </div>
     
-    <h2>Other stuff</h2>
-    <p><a href="https://ujjalsharma100.github.io/talkdb-landing-page/">talkdb</a> - I believe talking with data should be done in natural language. Data is key to business, and communicating with it and generating insights from it should be done in natural language, which AI enables.</p>
-    
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the selected tab content and mark button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
-</html> 
+</html>
